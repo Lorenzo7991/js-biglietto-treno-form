@@ -39,14 +39,17 @@ console.log("Prezzo finale: " + totPrice.toFixed(2));
 userMessage.innerHTML = `<strong>Il prezzo finale della tua tratta è:</strong> ${totPrice.toFixed(2)} euro`
 */
 
+//Recupero elementi nel DOM e li inizializzo in una variabile
 const firstNameInput = document.getElementById('userFirstName');
 const lastNameInput = document.getElementById('userLastName');
 const kmsInput = document.getElementById('userKms');
 const ageInput = document.getElementById('userAge');
 const calcBtn = document.getElementById('calcBtn');
 
+//Inizializzazione e assegnazione della variabile contenente il prezzo standard a km del biglietto
 const ticketStandardPrice = 0.21;
 
+//EventListener sul btn 
 calcBtn.addEventListener('click', function(){
     let firstName = firstNameInput.value;
     let lastName = lastNameInput.value;
@@ -54,5 +57,15 @@ calcBtn.addEventListener('click', function(){
     let age = parseInt(ageInput.value);
 
     let ticketPrice = kms * ticketStandardPrice;
+
     console.log(firstName, lastName, kms, age, "€" + ticketPrice);
+
+    if (age < 18) {
+        ticketPrice *= 0.8;  // Sconto del 20% per gli under 18
+    } else if (age >= 65) {
+        ticketPrice *= 0.6;  // Sconto del 40% per gli over 65
+    }
+
+    console.log("Prezzo del biglietto scontato: " + "€ " + ticketPrice)
+
 });
