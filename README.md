@@ -36,3 +36,8 @@ Se non vi sentite particolarmente creativi, vi forniamo uno screenshot da seguir
 - Usare una select per inserire l'età
 
 - Stampare sul biglietto un numero di carrozza e un numero di biglietto casuali
+
+---
+---
+## **`Traccia:`**
+![screenshot-track](assets/screenshot.png)
