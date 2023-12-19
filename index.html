@@ -20,13 +20,24 @@
     <script defer src="js/script.js"></script>
 </head>
 <body>
-    <div id="form" class="m-3">
-        <input type="text" id="userFirstName" value="Lorenzo" placeholder="Nome" class="text-center">
-        <input type="text" id="userLastName" value="Chierisini" placeholder="Cognome" class="text-center">
-        <input type="text" id="userKms" value="100" placeholder="Kilometri di percorenza" class="text-center">
-        <input type="text" id="userAge" value="17" placeholder="Età" class="text-center">
-        <button id="calcBtn">Calcola</button>
-        <button id="delBtn">Annulla</button>
-    </div>
+   <section id="cards-tickets" class="container-fluid text-center p-4">
+       <h1 class="text-white text-center mb-4">CALCOLA IL PREZZO DEL TUO BIGLIETTO</h1>
+        <div class="row justify-content-center">
+                <div id="user-data" class="col-10">
+                    <div class="top-col py-2">
+                        <input type="text" id="user-firstname" value="Lorenzo" placeholder="Nome" class="text-center border-3 rounded">
+                        <input type="text" id="user-lastname" value="Chierisini" placeholder="Cognome" class="text-center border-3   rounded">
+                        <input type="text" id="user-kms" value="100" placeholder="Kilometri di percorenza" class="text-center border-3   rounded">
+                        <input type="text" id="user-age" value="17" placeholder="Età" class="text-center border-3  rounded">
+                    </div>
+                    <div class="bottom-col">
+                        <button id="calc-btn">Calcola</button>
+                        <button id="del-btn">Annulla</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+                    
+                    
 </body>
 </html>
