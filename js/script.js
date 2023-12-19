@@ -54,8 +54,15 @@ calcBtn.addEventListener('click', function(){
     let firstName = firstNameInput.value;
     let lastName = lastNameInput.value;
     let kms = parseInt(kmsInput.value);
+    if (isNaN(kms) || kms <= 0) {
+        alert("Inserisci un valore NUMERICO e diverso da ZERO(0) per i chilometri.");
+        return;
+    }
     let age = parseInt(ageInput.value);
-
+    if (isNaN(age) || age <= 0) {
+        alert("Inserisci un valore NUMERICO e diverso da ZERO(0) per l'età.");
+        return;
+    }
     let ticketPrice = kms * ticketStandardPrice;
 
     console.log(firstName, lastName, kms, age, "€" + ticketPrice);
@@ -68,4 +75,11 @@ calcBtn.addEventListener('click', function(){
 
     console.log("Prezzo del biglietto scontato: " + "€ " + ticketPrice)
 
+});
+
+delBtn.addEventListener('click', function () {
+    firstNameInput.value = '';
+    lastNameInput.value = '';
+    kmsInput.value = '';
+    ageInput.value = '';
 });
