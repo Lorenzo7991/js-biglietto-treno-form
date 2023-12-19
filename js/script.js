@@ -50,8 +50,9 @@ const ticketStandardPrice = 0.21;
 calcBtn.addEventListener('click', function(){
     let firstName = firstNameInput.value;
     let lastName = lastNameInput.value;
-    let kms = kmsInput.value;
-    let age = ageInput.value;
+    let kms = parseInt(kmsInput.value);
+    let age = parseInt(ageInput.value);
 
-    console.log(firstName, lastName, kms, age,);
+    let ticketPrice = kms * ticketStandardPrice;
+    console.log(firstName, lastName, kms, age, "€" + ticketPrice);
 });
